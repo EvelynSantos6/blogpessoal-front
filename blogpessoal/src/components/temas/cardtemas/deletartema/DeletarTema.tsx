@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { RotatingLines } from "react-loader-spinner"
-import Tema from "../../../../models/Tema"
 import { AuthContext } from "../../../../contexts/AuthContext"
+import Tema from "../../../../models/Tema"
 import { buscar, deletar } from "../../../../services/Service"
 
 function DeletarTema() {
@@ -109,4 +109,4 @@ function DeletarTema() {
         </div>
     )
 }
-export default DeletarTema;
+export default DeletarTema
