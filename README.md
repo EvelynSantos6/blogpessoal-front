@@ -1,54 +1,97 @@
-# React + TypeScript + Vite
+# Blog Pessoal - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend do projeto **Blog Pessoal**, desenvolvido com React, TypeScript e Vite. O objetivo é criar uma aplicação web onde os usuários possam visualizar e interagir com postagens de blog.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/) com configurações personalizadas
+- [Vercel](https://vercel.com/) para deploy
 
-## Expanding the ESLint configuration
+## 📦 Instalação e Execução
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone o repositório:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+  ```bash
+  git clone https://github.com/EvelynSantos6/blogpessoal-front.git
+  cd blogpessoal-front
+  ```
+
+ 2. Instale as dependências:
+
+  ```bash
+  yarn install
+  ````
+
+ 3. Inicie o servidor de desenvolvimento:
+
+  ```bash
+  yarn dev 
+  ```
+
+O aplicativo estará disponível em http://localhost:5173.
+
+🌐 Deploy
+A aplicação está hospedada na Vercel e pode ser acessada através do seguinte link:
+
+👉 https://blogpessoal-front-roan.vercel.app
+
+📁 Estrutura do Projeto
+
+````pgql
+blogpessoal-front/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── App.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+````
+
+## 🌐 Deploy
+
+A aplicação está hospedada na Vercel e pode ser acessada através do seguinte link:
+
+👉 [https://blogpessoal-front-roan.vercel.app](https://blogpessoal-front-roan.vercel.app)
+
+## 📁 Estrutura do Projeto
+
+```
+blogpessoal-front/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── App.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `components/`: Componentes reutilizáveis da aplicação  
+- `pages/`: Páginas principais do blog  
+- `services/`: Serviços para comunicação com APIs
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✅ Funcionalidades
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Visualização de postagens de blog
+- Navegação entre páginas
+- Integração com API para listagem de postagens
+
+## 🛠️ Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+
